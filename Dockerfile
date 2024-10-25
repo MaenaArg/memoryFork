@@ -5,7 +5,7 @@ FROM nginx:latest
 RUN apt-get update && apt-get install -y file
 
 # Supprimer la configuration par défaut de Nginx
-#RUN rm /usr/local/etc/nginx/nginx.conf
+RUN rm /etc/nginx/nginx.conf
 
 RUN mkdir -p /var/concentration/html
 
