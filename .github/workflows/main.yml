@@ -14,3 +14,13 @@ jobs:
 
    - name: Execution sur les fichiers JPG
      run: find . -iname "*.jpg" -exec file {} \;
+
+ build-memory:
+  needs: test-memory
+  runs-on: self-hosted
+  steps:
+   - name: Check repo
+     uses: actions/checkout@v2
+
+   - name: Build Docker image
+     run: docker build -t maena/memory .
