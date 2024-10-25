@@ -1,0 +1,16 @@
+name: CI Memory
+
+on: 
+ push:
+  branches:
+   - develop
+
+jobs:
+ test-memory:
+  runs-on: self-hosted
+  steps:
+   - name: Check repo
+     uses: actions/checkou@v2
+
+   - name: Execution sur les fichiers JPG
+     run: find . -iname "*.jpg" -exec file {} \;
