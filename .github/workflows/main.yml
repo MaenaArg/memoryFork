@@ -40,4 +40,4 @@ jobs:
   runs-on: self-hosted
   steps:
    - name: Connexion ssh
-     run: ssh root@7a35929293af 'docker pull maena/memory && docker run -d -p 80:8080 maena/memory'
+     run: ssh margano@127.0.0.1 'docker pull maena/memory && docker run -d -p 80:8080 maena/memory'
