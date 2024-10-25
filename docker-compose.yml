@@ -1,0 +1,6 @@
+services:
+  memory-app:
+    image: maena/memory
+    ports:
+      - "8080:80"
+
