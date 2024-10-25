@@ -34,3 +34,10 @@ jobs:
 
    - name: Push Docker image
      run: docker push maena/memory
+
+ deploy-memory:
+  needs: push-memory
+  runs-on: self-hosted
+  steps:
+   - name: Connexion ssh
+     run: ssh root@7a35929293af 'docker pull maena/memory && docker run -d -p 80:8080 maena/memory'
