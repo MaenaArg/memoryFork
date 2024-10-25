@@ -11,7 +11,7 @@ RUN mkdir -p /var/concentration/html
 
 # Copier notre config specifique Nginx
 #COPY conf/nginx.conf /usr/local/etc/nginx/nginx.conf
-#COPY conf/nginx.conf /etc/nginx/nginx.conf
+COPY conf/nginx.conf /etc/nginx/nginx.conf
 
 COPY html/ /var/concentration/html/
 
